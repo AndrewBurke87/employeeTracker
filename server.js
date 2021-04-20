@@ -53,8 +53,8 @@ function mainMenu() {
                 'Update employee role',
                 'EXIT'
             ]
-        }).then(function (answer) {
-            switch (answer.start) {
+        }).then(function (response) {
+            switch (response.start) {
                 case 'View all employees':
                     viewEmployees();
                     break;
@@ -145,10 +145,10 @@ function addEmployee() {
                     },
                     message: "What is this employee's role? "
                 }
-            ]).then(function (answer) {
+            ]).then(function (response) {
                 let role_id;
                 for (let a = 0; a < res.length; a++) {
-                    if (res[a].title == answer.role) {
+                    if (res[a].title == response.role) {
                         role_id = res[a].id;
                         console.log(role_id)
                     }
@@ -156,9 +156,9 @@ function addEmployee() {
                 connection.query(
                     'INSERT INTO employee SET ?',
                     {
-                        first_name: answer.first_name,
-                        last_name: answer.last_name,
-                        manager_id: answer.manager_id,
+                        first_name: response.first_name,
+                        last_name: response.last_name,
+                        manager_id: response.manager_id,
                         role_id: role_id,
                     },
                     function (err) {
@@ -178,11 +178,11 @@ function addDepartment() {
                 message: 'Which department would you like to add?',
                 name: 'newDepartment'
             }
-        ]).then(function (answer) {
+        ]).then(function (response) {
             connection.query(
                 'INSERT INTO department SET ?',
                 {
-                    name: answer.newDepartment
+                    name: response.newDepartment
                 });
             var query = 'SELECT * FROM department';
             connection.query(query, function (err, res) {
@@ -220,18 +220,18 @@ function addRole() {
                         return deptArr;
                     },
                 }
-            ]).then(function (answer) {
+            ]).then(function (response) {
                 let department_id;
                 for (let a = 0; a < res.length; a++) {
-                    if (res[a].name == answer.Department) {
+                    if (res[a].name == response.Department) {
                         department_id = res[a].id;
                     }
                 }
                 connection.query(
                     'INSERT INTO role SET ?',
                     {
-                        title: answer.new_role,
-                        salary: answer.salary,
+                        title: response.new_role,
+                        salary: response.salary,
                         department_id: department_id
                     },
                     function (err, res) {
