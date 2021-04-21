@@ -16,7 +16,7 @@
 
 # Project Description
 
-     This is a command line program that allows the user to view, add and update (employees, roles and departments). This program is useful for organizing andplanning your business.
+     This is a command line program that allows the user to view, add and update (employees, roles and departments). This program is useful for organizing and planning your business.
 
 # Licenses
 
