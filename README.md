@@ -1,0 +1,40 @@
+# **Employee Tracker**
+
+# Table of Contents
+
+     * [Project Description](#project - description)
+     * [Installation](#installation)
+     * [Usage](#usage)
+     * [Tests](#tests)
+     * [License](#license)
+     * [Contributions](#contributions)
+     * [Questions](#questions)
+
+# Github username
+
+     AndrewBurke87
+
+# Project Description
+
+     This is a command line program that allows the user to view, add and update (employees, roles and departments). This program is useful for organizing andplanning your business.
+
+# Licenses
+
+     MIT
+
+# Installation
+
+     npm install
+
+# Test
+
+     n/a
+
+# Contributions
+
+     No
+
+# Questions
+
+     If you have any questions, please contact the project owner by clicking on the email listed below.
+     Drewburke39@gmail.com
