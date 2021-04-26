@@ -1,5 +1,9 @@
 # **Employee Tracker**
 
+github: https://github.com/AndrewBurke87/employeeTracker
+
+screencastify: https://drive.google.com/file/d/1WIq_HQx46cKBqqYL7gAWECPBag39qxfI/view
+
 # Table of Contents
 
      * [Project Description](#project - description)
